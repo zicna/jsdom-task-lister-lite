@@ -12,13 +12,21 @@ let submitNewTask = (event) => {
   if (newTask !== ""){
     tasks.innerHTML += 
       `
-        <li>
+        <li id=${newTask}>
           ${newTask}
           <button data-description=${newTask}>X</button>
         </li>
       `
       newTaskDescription.value = ""
   }
+  tasks.addEventListener('click', (event) => {
+    if (event.target.nodeName === "BUTTON"){
+      // debugger
+      document.getElementById(`${event.target.dataset.description}`).remove()
+      // console.log("hello there")
+    }
+
+  })
   
 
 }
