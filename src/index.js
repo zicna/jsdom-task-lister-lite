@@ -19,17 +19,16 @@ let submitNewTask = (event) => {
       `
       newTaskDescription.value = ""
   }
-  tasks.addEventListener('click', (event) => {
-    if (event.target.nodeName === "BUTTON"){
-      // debugger
-      document.getElementById(`${event.target.dataset.description}`).remove()
-      // console.log("hello there")
-    }
-
-  })
   
-
 }
+tasks.addEventListener('click', (event) => {
+  if (event.target.nodeName === "BUTTON"){
+    // debugger
+    document.getElementById(`${event.target.dataset.description}`).remove()
+    // console.log("hello there")
+  }
+
+})
 
 document.addEventListener("DOMContentLoaded", () => {
   // your code here
